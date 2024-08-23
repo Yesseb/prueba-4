@@ -1,0 +1,222 @@
+:root {
+    --fuente-principal: "League Spartan", sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+    font-family: var(--fuente-principal);
+    font-optical-sizing: auto;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: hsl(300, 24%, 96%);
+    max-width: 95%;
+    width: 120rem;
+    margin: 10rem auto;
+}
+
+.container{
+    background: hsl(0, 0%, 100%);
+    width: 100%;
+    padding: 6rem 2rem;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    position: relative;
+    
+
+    .container__img-top {
+        position: absolute;
+        top: 0;
+    }
+
+    .container__img-bottom {
+        position: absolute;
+        top: 17px;
+    }
+}
+
+
+
+.container__part-one {
+   text-align: center;
+   margin-bottom: 2rem;
+}
+
+.ctn-description{
+    margin-bottom: 2rem;
+    .ctn-description__title {
+        color: hsl(300, 43%, 22%);
+        font-weight: 800;
+        font-size: 3rem;
+        margin-bottom: 2rem;
+      
+    }
+
+    .ctn-description__text {
+        font-size: 1.5rem;
+        line-height: 1.5em; 
+        /* text-align: justify; */
+    }
+}
+
+.ctn-categories {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.ctn-caregories__item {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    
+    padding: 1.5rem;
+    background: hsl(300, 24%, 96%);
+    border-radius: .5rem;
+
+    .ctn-starts {
+       .ctn-starts__item{
+        margin-right: .5rem;
+       }
+    }
+
+
+    .ctn-text {
+        color: hsl(300, 43%, 22%);
+        font-size: 1.5rem;
+    }
+}
+
+.cards__item {
+    background: hsl(300, 43%, 22%);
+    margin-bottom: 1.5rem;
+    border-radius: .5rem;
+    padding: 2rem;
+    color: hsl(0, 0%, 100%);
+
+    .cards__header {
+        display: flex;
+        gap: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .cards__image {
+        width: 3rem;
+        height: 3rem;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+
+    .cards__name {
+        font-size: 1.5rem;
+        margin-bottom: .7rem;
+    }
+
+    .cards__buyer {
+        color: hsl(333, 80%, 67%);
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+}
+
+.cards__text-description {
+    line-height: 1.5em;
+    font-size: 1.3rem;
+}
+
+@media(min-width: 768px) {
+    .container{
+        padding: 12rem;
+    }
+
+    .container__part-one {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 17rem;
+        text-align: start;
+    }
+
+
+    .ctn-description{
+        flex: 1.5 1.5 0;
+        margin-bottom: 0;
+        .ctn-description__title {
+            font-size: 4.8rem;
+            margin-bottom: 2rem;
+          
+        }
+
+    }
+
+    .ctn-categories {
+        flex: 2 1 0;
+        flex-wrap: wrap;
+    }
+
+
+    .ctn-caregories__item {
+
+        flex-direction: row;
+        gap: 2rem;
+    
+        &:nth-child(1) {
+            align-self: flex-start;
+        }
+    
+        &:nth-child(2) {
+            align-self: center;
+        }
+    
+        &:nth-child(3) {
+            align-self: flex-end;
+        }
+    
+        .ctn-starts {
+           .ctn-starts__item{
+            margin-right: .5rem;
+           }
+        }
+    
+    
+    }
+
+
+    .cards {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+        height: 21rem;
+        
+
+        .cards__item {
+            margin: 0;
+            &:nth-child(1) {
+                align-self: flex-start;
+            }
+             
+            &:nth-child(2) {
+                align-self: center;
+            }
+            &:nth-child(3) {
+                align-self: flex-end;
+            }
+        }
+    }
+}
+
+footer {
+    padding: 2rem;
+    margin-top: 10rem;
+    font-size: 2rem;
+    text-align: center;
+}
+.copyright img{
+    width: 3rem;
+}
